@@ -1,15 +1,8 @@
-const readline = require('readline');
-const reader = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
 let lines = [];
+require('readline').createInterface({input: process.stdin,output: process.stdout})
+				.on('line', line => {lines.push(line);})
+				.on('close', () => {console.log(main(lines));});
 
-reader.on('line', line => {
-    lines.push(line);
-});
-
-reader.on('close', () => {
-	//Code goes here. Input is in lines
-});
+const main = (input) => {
+	// Code goes here
+}
